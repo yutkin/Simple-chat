@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.3)
 project(server)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall")
-include_directories(${CMAKE_SOURCE_DIR}/src/rapidjson)
+include_directories(${CMAKE_SOURCE_DIR}/src/rapidjson/include/rapidjson)
 
 set(SOURCE_FILES src/server/main.cpp
         src/server/base_server.cpp
