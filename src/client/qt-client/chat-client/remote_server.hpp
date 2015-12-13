@@ -41,7 +41,7 @@ private:
     std::string nickname;
     std::string ip;
     int port;
-    const int timeout = 5;
+    const int timeout = 7;
     QTcpSocket *master_socket = nullptr;
 
 };

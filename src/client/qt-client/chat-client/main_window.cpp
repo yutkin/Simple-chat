@@ -21,15 +21,16 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::establish_connection(const std::string& nickname,
                                       const std::string& ip, int port)
 { 
-    auto thread = new QThread(this);
-
     if (server != nullptr)
     {
         server->destroy_connection();
         delete server;
     }
 
-    server = new Server(nickname, ip, port, this);
+
+    server = new Server(nickname, ip, port);
+    auto thread = new QThread(this);
+    server->moveToThread(thread);
 
     connect(thread, SIGNAL(started()), server, SLOT(establish_connection()));
 

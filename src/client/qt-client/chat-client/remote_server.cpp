@@ -26,7 +26,7 @@ void Server::establish_connection()
     connect(master_socket, SIGNAL(error(QAbstractSocket::SocketError)),
             SIGNAL(error(QAbstractSocket::SocketError)));
 
-    emit stop_thread();
+//    emit stop_thread();
 }
 
 void Server::destroy_connection()
