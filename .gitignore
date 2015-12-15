@@ -1,5 +1,5 @@
-src/client/qt-client/*
-!src/client/qt-client/chat-client/
+src/client/*
+!src/client/
 a.out
 client.cpp
 serv
